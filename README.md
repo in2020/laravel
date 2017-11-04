@@ -6,6 +6,7 @@
 * Aws(ec2) 
 * Apache2.4 php7.0 mysql5.6 
 * Laravel5.4
+* Laravel study
 
 ## Aws(ec2)
 * Aws site: https://aws.amazon.com/ko/
@@ -20,3 +21,7 @@
 * https://laravel.kr/docs/5.4/installation#server-requirements
 * How To Install Composer and Laravel on EC2 Instance: https://www.youtube.com/watch?v=p_VwZTmyG5o
 * 라라벨 구조 설명 및 노드 모듈 설치: https://www.youtube.com/watch?v=0EOQToeoWP0
+
+## Laravel study
+* https://www.lesstif.com/pages/viewpage.action?pageId=24445742
+* http://l5.appkr.kr/lessons/04-routing-basics.html
