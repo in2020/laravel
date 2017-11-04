@@ -34,3 +34,10 @@
   * C : ..
   
 * Pretty URLs
+  * apache mod_rewrite
+  * /etc/httpd/conf/httpd.conf 수정
+    * <Directory /var/www/html>
+   AllowOverride ALL #원래는 None인데 ALL로 수정하자 
+   </Directory>   설정을 변경했으니 아파치 재시작한다
+
+
