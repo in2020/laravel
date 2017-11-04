@@ -29,8 +29,8 @@
 
 ## Goal
 * MVC
-  *M : Query builder
-  *V : Blade
-  *C : ..
+  * M : Query builder
+  * V : Blade
+  * C : ..
   
 * Pretty URLs
