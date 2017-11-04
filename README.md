@@ -7,6 +7,7 @@
 * Apache2.4 php7.0 mysql5.6 
 * Laravel5.4
 * Laravel study
+* Goal
 
 ## Aws(ec2)
 * Aws site: https://aws.amazon.com/ko/
@@ -25,3 +26,11 @@
 ## Laravel study
 * https://www.lesstif.com/pages/viewpage.action?pageId=24445742
 * http://l5.appkr.kr/lessons/04-routing-basics.html
+
+## Goal
+* MVC
+  *M : Query builder
+  *V : Blade
+  *C : ..
+  
+* Pretty URLs
