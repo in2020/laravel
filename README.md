@@ -29,15 +29,15 @@
 
 ## Goal
 * MVC
-  * M : Query builder
+  * M : Eloquent 
   * V : Blade
   * C : ..
   
 * Pretty URLs
   * apache mod_rewrite
   * /etc/httpd/conf/httpd.conf 수정
-    * Directory /var/www/html AllowOverride ALL #원래는 None인데 ALL로 수정하자 설정 후 아파치 재시작한다
+    * Directory /var/www/html AllowOverride ALL #원래는 None인데 ALL로 수정하자 설정 후 아파치 재시작한다
 
-   
-
+* 2017.11.05
+	* insert logic 
 
