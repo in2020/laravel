@@ -29,13 +29,11 @@
 
 ## Goal
 * MVC
-
   * M : Query builder
   * V : Blade
   * C : ..
   
 * Pretty URLs
-
   * apache mod_rewrite
   * /etc/httpd/conf/httpd.conf 수정
     * <Directory /var/www/html>
