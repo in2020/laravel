@@ -40,4 +40,9 @@
 
 * 2017.11.05
 	* insert logic 
-
+* 2017.11.06	
+	* image file upload
+* 2017.11.07	
+	*  not free... https://innostudio.de/fileuploader/documentation/#examples
+  *  chose free library http://plugins.krajee.com/file-input#top
+	
