@@ -14,7 +14,7 @@
 * EC2: https://ap-northeast-2.console.aws.amazon.com/ec2/v2/home?region=ap-northeast-2
 * EC2 guide: http://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/EC2_GetStarted.html#ec2-launch-instance
 * PuTTY guide on Windows: http://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/putty.html
-
+* Edit security group to connect by my ip http://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html
 ## Apache2.4 php7.0 mysql5.6 
 * AWS Lamp guide: http://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/install-LAMP.html
 
