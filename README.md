@@ -46,3 +46,10 @@
 	*  not free... https://innostudio.de/fileuploader/documentation/#examples
   *  chose free library http://plugins.krajee.com/file-input#top
 	
+	
+	
+	
+	
+	
+# Laravle Study(2018.05~)
+- laravel 프로젝트 코드를 git으로 땡기면 vendor를 땡기기 위해 composer 써야하고 laravle app_key 생성해야한다. 
