@@ -53,3 +53,7 @@
 	
 # Laravle Study(2018.05~)
 - laravel 프로젝트 코드를 git으로 땡기면 vendor를 땡기기 위해 composer 써야하고 laravle app_key 생성해야한다. 
+- Model::create fillable guarded 설정 create로 row생성시 guarded 된(fillable에 포함되지 않는) column은 값이 설정되지 않는다. 
+  is_admin 같은 속성을 배열에서 바로 설정되지 않도록 하기 위한 기능 (직정 modle 객체를 생성하여 지정할 필요가 있는 중요한 column에 사용)
+  
+  
