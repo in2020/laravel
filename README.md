@@ -57,3 +57,4 @@
   is_admin 같은 속성을 배열에서 바로 설정되지 않도록 하기 위한 기능 (직정 modle 객체를 생성하여 지정할 필요가 있는 중요한 column에 사용)
 - Accessors & Mutators column을 가공할 필요가 있을때 사용 (추출시 Accessor 삽입시 Mutator)
 - relation with 기능 : eager load
+- Laravel 5 IDE Helper Generator composer require barryvdh/laravel-ide-helper
