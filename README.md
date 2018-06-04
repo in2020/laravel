@@ -60,4 +60,5 @@
 - Laravel 5 IDE Helper Generator composer require barryvdh/laravel-ide-helper
 - Model casting 설정 $cast 지정 append와 accessor append에 accesor를 추가하면 collection toArray에서 보인다. 
 - 쿼리빌더 
-- validation : msg는 '.'으로 구분하여 설정 가능 특정 항목 검사시 해당 항목만 분명 하게 검사하도록 로직 구현 (아이디 검사 : if(member) x , if(member->mid) o)
+- validation : msg는 '.'으로 구분하여 설정 가능 특정 항목 검사시 해당 항목만 분명 하게 검사하도록 로직 구현 (아이디 검사 : if(member) x , if(member->mid) o) 
+- validation rule : https://laravel.kr/docs/5.6/validation#available-validation-rules
