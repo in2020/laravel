@@ -64,3 +64,9 @@
 - validation rule : https://laravel.kr/docs/5.6/validation#available-validation-rules
 - composer dump-autoload -o : 추가된 패키지 설정
 - resource/lang/kr/validation.php : 기본 validation 설정(attrivutes에 설정된 항목은 변환되어 출력 되고 아니면 Calmel case를 영어 띄어쓰기로 치환하여 출력
+## 2018.06.07
+- composer du, composer install의 차이 패키지 추가시 install 오토로딩 수정사항이 있을시 du 
+- alias @ app.php, validation attributes @ validation.php 
+- $request->route()->getActionName() : return ex ) App\Http\Controllers\LoginController@logout
+- middleware 선언 위치 kernel.php
+
