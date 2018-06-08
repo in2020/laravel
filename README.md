@@ -69,5 +69,9 @@
 - alias @ app.php, validation attributes @ validation.php 
 - $request->route()->getActionName() : return ex ) App\Http\Controllers\LoginController@logout
 - middleware 선언 위치 kernel.php
+## 2018.06.08
 - mysql 내장 function 작성시 DB::raw 사용 ex) Category::where(DB::raw('LENGTH(category)'),3)->orderBy('sort')->get()
-
+- 개발 순서 : rest 정의 부터 진행 (리스트는 DOMAIN/countries : indexCountries 단일 항목은 DOMAIN/country : showCountry)
+- 개발 순서 : rest 정의 -> route 정의 -> model 정의 -> controller 
+- uri에 인자가 들어갈 경우 controller에서는 해당 인자 validation부터 수행 (DOMAIN/cities/{category})
+- sql 약속어는 모두 대문자 작성
