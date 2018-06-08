@@ -69,4 +69,5 @@
 - alias @ app.php, validation attributes @ validation.php 
 - $request->route()->getActionName() : return ex ) App\Http\Controllers\LoginController@logout
 - middleware 선언 위치 kernel.php
+- mysql 내장 function 작성시 DB::raw 사용 ex) Category::where(DB::raw('LENGTH(category)'),3)->orderBy('sort')->get()
 
