@@ -1,0 +1,188 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0; font-family: "Apple SD Gothic Neo", sans-serif;}
+li { list-style:none;}
+
+.main{font-size:15px; font-weight:300; color:#333;}
+.top{padding:20px 20px 20px 20px; border-bottom: 1px solid #f7f7f7; position:fixed; width: 100%; left: 0; top: 0; z-index: 100; background-color: #fff; box-sizing: border-box;/*패딩값이 있어서 크기가 늘어나서(100% + 20px + 20px) 설정버튼 밀림. border-box 속성으로 패딩값을 width에 포함*/}
+.top .location { padding-bottom: 20px; height: auto; transition: .2s}
+.top .location:after {content: ""; display: block; clear: both}
+.minimize .location {padding-bottom: 0; height: 0; overflow: hidden}/*스크롤시 탑 축소 */
+.top .setting{float: right; padding-top: 8px;}
+.top .spot{float: left;}
+.top .spot .now{font-size: 10px; font-weight: 700; padding-bottom: 4px; line-height: 10px; height: 10px;}
+.top .category{ clear: both; white-space: nowrap;/*a 링크 요소들 밑으로 떨어지는 것들 떨어지지 않게 줄바꿈 하지 않는 다는 속성 white-space: nowrap */ overflow-x: auto; /*가로 스크롤 만들기 */ line-height: 15px; height: 15px;}
+.top .category::-webkit-scrollbar { display: none; }
+.top .category a {font-size: 15px; font-weight: 500; color: #ccc; text-decoration: none; margin-right: 30px;}
+.top .category a:last-child {margin-right: 0 /*마지막 요소의 우측 여백 제거 */}
+.top .category .active {color: #333; font-weight: 700}
+
+
+.selectbox{position:relative;z-index:1;}
+.selectbox:before{-webkit-appearance:none;-moz-appearance:none;appearance:none; position:fixed; top:0; left:0; z-index:100;}
+.selectbox label{position:absolute;top:0;left:0;color:#333;white-space:nowrap;font-size:20px;height:20px;line-height:20px;font-weight:700;z-index:-1;background:url(../images/icon-arrow-b.svg) no-repeat right center;background-size:auto 11px;padding-right:35px;transition:.2s;-webkit-tap-highlight-color:transparent;}
+.selectbox select{padding-right:50px;font-size:20px;height:20px;line-height:20px;font-family:inherit;border:0;opacity:0;filter:alpha(opacity=0);-webkit-appearance:none;-moz-appearance:none;appearance:none;padding-left:10px;}
+
+.listSlider {padding-top: 114px; box-sizing: border-box; transition: .2s}
+
+.list{}
+.list .imgsize{background-size: cover; background-position: center center; height: 170px;}
+.list .class-name{padding: 20px 20px 20px 20px}
+.list .class-name p{padding-bottom: 5px;}
+.list .name{float: left;}
+.list .money{float: right;}
+.list h2{font-size: 20px; line-height: 20px; clear: both; /*제목을 따로 뺐음. 플롯을 제거하고 새로 시작되니까 클리어 속성 부여 */ overflow: hidden; text-overflow: ellipsis; white-space: nowrap; /*글씨가 늘어나면 ...으로 줄여서 넘치지 않게 */}
+.list h2 img{width: 20px; height: 20px; align-content: center; padding-right: 5px; vertical-align: top; }
+.list li{padding-bottom: 30px}
+
+.filter{left: 50%;	bottom: 30px;	position: fixed;	z-index: 4;	width: 54px;	margin-left: -27px;	height: 33px;	background-color: #fff;	background-image: url(../images/icon-filter-off.svg);	background-repeat: no-repeat;	background-position: center center;	background-size: auto 21px;	box-shadow: 6px 6px 9px 0 rgba(0, 0, 0, 0.15);	border-radius: 50px;}
+.filter.ed {background-image: url(/images/icon-filter-on.svg);}/*필터적용되었을때 배경이미지 바꿈*/
+
+.filterWindow{position:fixed;width:100%;height:100%;background-color:#fff;z-index:110; bottom: -100%; transition: .2s}
+.b2t {bottom: 0 !important}
+.filterWindow .header{text-align:center;background-color:#fff; font-size:20px; font-weight:700;height:60px !important; padding: 0 !important; line-height: 60px;  color:#333; position: relative; border-bottom: 5px solid #eeeeee; }
+.filterWindow .header .close{position:absolute;left:20px;top:17px;}
+.filterWindow .header .reset{position:absolute;right:20px;top:0;font-size:15px;font-weight:300;color:#888;}
+.filterWindow .apply{text-align:center;font-size:20px;color:#fff;font-weight:700;background-color:#88b14b;height:60px;display:inline-block;width:100%;line-height:60px;text-decoration:none;}
+.checkList{height:calc(100% - 120px);overflow-y:auto;padding:0 20px;}
+.checkList ul{border-bottom:1px solid #eee;padding-bottom:30px;padding-top:30px;}
+.checkList ul li{margin-top:10px;height:20px;line-height:20px;}
+
+.clear {clear: both;}
+/*클래스 리스트*/
+
+.classimg{}
+.p-list .classimg img{width: 100%; vertical-align:top}
+.p-list .listleft{float: left; padding-right:10px; box-sizing:border-box; width:50%; }
+.p-list .listleft li, .p-list .listright li { padding-bottom:30px;}
+.p-list .listright{float: right; padding-left:10px; box-sizing:border-box;width:50%; }
+.p-list .class-list{font-size: 15px; font-weight: 300; padding-top: 10px;}
+.p-list .classbox{padding-top: 40px;}
+.p-list .classmore{background-color:#f3f3f3; border-radius:5px; font-size:15px; display:inline-block; padding:9px 30px; font-weight: 500; margin-top: 30px; align-content: center;}
+.phonebtn{background-color:#ffde59; font-size:20px; display:inline-block; text-align: center; width: 100%; padding:21px 0 21px 0; font-weight: 500; margin-top: 20px; letter-spacing: -1px;}
+.p-list{padding-top: 30px; padding-left:20px; padding-right:20px;}
+.p-list:after { content:""; clear:both; display:block;}/*float 클리어하는 또다른 방법. css로 가상 html태그를 삽입*/
+.p-view .p-info{font-size: 15px; color: #888; padding-top: 10px;}
+.p-view .location{padding-top: 10px;}
+
+.c-view .imgsize{background-size: cover; background-position: center center; height: 230px;}
+.c-viwe h2{font-size: 26px; font-weight: 700;}
+.c-view h2 img{width: 25px; height: 25px; align-content: center; padding-right: 7px; vertical-align: top; }
+.c-view h3{font-size: 20px; line-height: 1.5;color: #333; font-weight: 500; letter-spacing: -1.0px; padding-bottom: 8px; }
+.c-view .titlefield{padding-top: 30px; padding-bottom: 30px; text-align: center; border-bottom: 5px solid #f7f7f7;}
+.c-view .placename{padding-bottom: 8px;}
+.c-view .subtext{font-size: 15px; line-height: 1.5; color: #888; font-weight: 300; padding: 30px 20px 30px 20px; border-bottom: 1px solid #f7f7f7;}
+.c-view .more {background-position: right center; background-repeat: no-repeat; background-image: url(/images/icon-arrow-s.svg); background-size: auto 6px; padding-right: 17px; transition: .2s;}
+.c-view .desc{max-height: calc( 22px * 5); overflow: hidden; transition: .3s; margin-bottom:15px; }
+
+.c-view .maplink{font-size: 15px; color: #888; font-weight: 300; border-bottom: 1px solid #f7f7f7; line-height:64px; padding: 0px 20px 0px 20px}
+.c-view .maplink .map{float: left; line-height:64px;}
+.c-view .maplink .arrow{float: right; vertical-align: middle;}
+.c-view .maplink h3{line-height: 64px; padding-bottom:0}
+.c-view .arrow img{width: 7px;}
+
+.c-view .place{padding: 0px 20px 0px 20px; line-height: 110px; display:table; width:100%; box-sizing:border-box;}
+.c-view .place .profile img{width: 50px; height: 50px; border-radius:50px; vertical-align: middle;}
+.c-view .place .profile{ padding-right: 10px; display:table-cell; width:50px;}
+.c-view .place .placetext{line-height: 30px; vertical-align: middle; display:table-cell; height:110px; }
+.c-view .place .arrow{ text-align:right; vertical-align: middle;}
+
+.c-view .p-list {padding-top:0 !important;}
+.c-view .classbox{padding-top: 40px;}
+.c-view .classmore{background-color:#f3f3f3; border-radius:5px; font-size:15px; padding:9px 0; font-weight: 500; text-align: center; width:96px; margin:0 auto;/*div등 block요소 가운데 정렬할때는 width를 주고 margin을 auto를 주면 됨(left랑 right)*/}
+.c-view .phonebtn{background-color:#ffde59; font-size:20px; display:inline-block; text-align: center; width: 100%; padding:21px 0 21px 0; font-weight: 500; margin-top: 30px; letter-spacing: -1px;}
+.desc.expand {max-height: 1000px; transition:.3s}
+
+
+.p-view .imgsize{background-size: cover; background-position: center center; height: 230px;}
+.p-viwe h2{font-size: 26px; font-weight: bold}
+.p-view .titlefield{padding-top: 30px; padding-bottom: 30px; text-align: center; border-bottom: 5px solid #f7f7f7;}
+.p-view .tag a{background-color:#f3f3f3;color:#888;margin-right:7px;border-radius:3px;font-size:13px;display:inline-block;padding:6px 10px;margin-top: 20px;}
+.p-view .maplink{font-size: 15px; color: #888; font-weight: 300; border-bottom: 1px solid #f7f7f7; line-height:64px; padding: 0px 20px 0px 20px}
+.p-view .maplink .map{float: left; line-height:64px;}
+.p-view .maplink .arrow{float: right; vertical-align: middle;}
+.p-view .maplink h3{line-height: 64px;}
+.p-view .arrow img{width: 7px;}
+
+.view {min-height: 100%; box-sizing: border-box; top: 36%; position: relative; z-index: 2; background-color: #fff;}
+.s-top{height:36%; background-size:cover;background-position:center;position:fixed; width: 100%; left: 0; top: 0; z-index: 1}
+.s-top .navi{position:absolute;width:100%;box-sizing:border-box;padding:20px; z-index: 3 }
+.s-top .navi .share{position:absolute;right:20px;}
+.s-top .navi .like{position:absolute;right:65px;}
+.s-top .sharepop {position: absolute; top: 52px; right: 7px; z-index: 3; display: none}
+.s-top .sharepop .arrow {width:0px;height:0px;border-left:10px solid transparent; border-bottom:10px solid #fff; margin-left:calc(100% - 30px);}
+.s-top .sharepop .sharein {background-color: #fff; padding: 20px; font-size: 0; width: 210px; box-sizing: border-box; white-space: nowrap; border-radius: 10px; box-shadow: 0px 15px 30px 0 rgba(0, 0, 0, 0.15);}
+.s-top .sharepop .sharein h3 {font-size: 15px; margin-bottom: 14px; float: left}
+.s-top .sharepop .sharein .shareclose {float: right;}
+.s-top .sharepop .sharein ul {clear: both}
+.s-top .sharepop .sharein li{display: inline-block; width: 33.3%;}
+.s-top .sharepop .sharein li:nth-child(2){text-align: center}
+.s-top .sharepop .sharein li:last-child{text-align: right}
+
+.bxslider {z-index: 2}
+.bxslider, .bxslider li {height:100%;}
+.bxslider li {background-size: cover; background-position: center; background-color: #ccc}
+
+.agree {height:100%; width: 100%; position: fixed; left: 0; top: 0; z-index: 5; background-color: #fff}
+.agree .header{text-align:center;background-color:#fff; font-size:20px; font-weight:700;height:60px !important; padding: 0 !important; line-height: 60px;  color:#333; position: relative; border-bottom: 5px solid #eeeeee; }
+.agree .agree_in {position: relative; padding: 0 20px; text-align: center; line-height: 1.3; color: #333; height: calc(100% - 65px); box-sizing: border-box}
+.agree .agree_in h1 {font-size: 20px; letter-spacing: -1px;}
+.agree .agree_in h2 {font-size: 15px; font-weight: 300; margin-top: 24px;}
+.agree .agree_in .push_icon {height: 44.5%;vertical-align: middle; display: flex; align-items: flex-end; width: 100%; box-sizing: border-box; padding-bottom: 50px;}
+.agree .agree_in .push_icon img {vertical-align: middle; margin:0 auto}
+.agree .agree_in .btn_set {position: absolute; width:calc(100% - 40px); bottom: 14px;}
+.agree .agree_in .btn_set a {text-align:center;font-size:20px;height:50px;display:inline-block;width:100%;line-height:50px;text-decoration:none; border-radius: 70px; color: #aaa}
+.agree .agree_in .btn_set .accept{color:#fff;font-weight:700;background-color:#88b14b; margin-bottom: 14px;}
+
+.agree_ok { position: fixed; width: 100%; height: 100%; bottom: -100%;  z-index: 6; background-color: rgba(255,255,255,0.95); box-sizing: border-box; padding: 30px; display: flex; align-items: center; letter-spacing: -2px; transition: .2s; }
+.agree_ok .msg { }
+.agree_ok .msg h1 {color: #333; font-size: 30px; margin-bottom: 30px;}
+.agree_ok .msg h2, .agree_ok .msg p {color: #333; font-size: 15px; font-weight: 300; margin-bottom: 20px; letter-spacing: -1px; line-height: 25px; }
+.agree_ok .msg p {color: rgba(51, 51, 51, 0.6);}
+.agree_ok .msg a {margin-top: 40px; border-radius:40px; color: #fff; font-size: 20px; line-height: 50px; display: block; background-color: #88b14b; text-align: center; font-weight: bold; letter-spacing: -1px;}
+
+.next {height: 100%; width: 100%; z-index: 15; position: fixed; background-color: #fff; top: 0; right: -100%; transition: .2s}
+.next .header{text-align:center;background-color:#fff; font-size:20px; font-weight:700;height:60px !important; padding: 0 !important; line-height: 60px;  color:#333; position: relative; border-bottom: 5px solid #eeeeee; }
+.next .header .close{position:absolute;left:20px;top:17px;}
+.next .next_cont {height:calc(100% - 65px); position: relative; box-sizing: border-box;}
+.next .next_cont .map { height: 80%; position: relative; background-color: #fff;}
+.next .next_cont .map_info {background-color: #fff; padding: 20px; position: absolute; bottom: 0; width: 100%; z-index: 3; box-sizing: border-box;  line-height: 25px; color: #333; font-size: 15px; height: 20%; }
+.next .next_cont .map_info p {}
+.next .next_cont .map .iframe{display:block; width:100vw; border:0; z-index: -1}
+
+.idPrice .next_cont {padding: 30px 20px; line-height: 20px; font-size: 15px;}
+.idPrice .next_cont .bringtext {margin-bottom: 20px;}
+
+.idImg .next_cont {overflow-y:auto; -webkit-overflow-scrolling:touch;}
+.idImg .next_cont img {width: 100%; vertical-align: top; margin-bottom: 10px; display: block}
+.idImg .next_cont img:last-child {margin-bottom: 0;}
+
+.sub2depth{height:100%; box-sizing: border-box; padding-top: 65px;}
+.sub2depth .header{text-align:center;background-color:#fff; font-size:20px; font-weight:700;height:60px; line-height: 60px;  color:#333; position: fixed; width: 100%; border-bottom: 5px solid #eeeeee; top: 0 }
+.sub2depth .header .back{position:absolute;left:20px;top:17px;}
+
+.setting ul li {line-height: 78px; box-sizing: border-box; border-bottom: 1px solid #eee; background: url(/images/icon-view.svg) no-repeat right 20px center; background-size: 13px auto; padding-left: 20px; font-size: 20px; letter-spacing: -1px; font-weight: bold}
+.setting ul li a {display: block; height: 78px}
+/*
+.setting li.onoff {background: none;}
+.setting li.onoff .right_area {float: right; line-height: 78px; padding-right: 20px;}
+*/
+.setting footer {color: #aaa; font-size: 12px; text-transform: uppercase; left: 20px; bottom: 20px; position: absolute; }
+
+.inquire .incont {padding: 30px 20px}
+.inquire .incont h1 {font-size: 30px; font-weight: 200; line-height: 37px; letter-spacing: -2px; padding-bottom: 30px; border-bottom: 1px solid #333; margin-bottom: 40px; word-break: keep-all}
+.inquire .incont .block {font-size: 15px; line-height: 20px; margin-bottom: 40px;}
+.inquire .incont .block .link-text a{color: #4ba9eb; margin-top: 12px; text-decoration: underline; display: block}
+.inquire .incont .btn-write{background-color:#f3f3f3; border-radius:5px; font-size:15px; display:inline-block; padding:9px 20px; font-weight: 500; margin-top: 20px; align-content: center;}
+
+.contact .map_img{background-size: cover; background-position: center center; height: 190px;}
+.contact .address{padding: 20px 20px 20px 20px; line-height: 1.67; color: #888; font-size: 15px; font-weight: 300; border-bottom: 1px solid #eee;}
+.contact .phon_box{padding: 20px 20px 20px 20px; border-bottom: 1px solid #eee;}
+.contact .homepage_box{padding: 20px 20px 20px 20px;}
+.contact .title{font-size: 20px; font-weight: 500; }
+.contact .body_text{padding-top: 10px; line-height: 1.67; color: #888; font-size: 15px; font-weight: 300;}
+
+
+
+
+
