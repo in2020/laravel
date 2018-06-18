@@ -75,3 +75,5 @@
 - 개발 순서 : rest 정의 -> route 정의 -> model 정의 -> controller 
 - uri에 인자가 들어갈 경우 controller에서는 해당 인자 validation부터 수행 (DOMAIN/cities/{category})
 - sql 약속어는 모두 대문자 작성
+## 2018.06.18
+- collection을 잘못 인식하고 있던것이 collectino은 vetoer array 같은 자료형으로 받아 드려야하고 안에 들어가는 내용은 단순 item 어떤것도 올수 있음.. only 같은 메소드는 collection item에 먹히는 method이고 values 같은 아이템은 collection 자체에서 호출되는 method 
