@@ -34,6 +34,6 @@
 - eager loading relation sql 보는 방법 
 ```
 vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php:eagerLoadRelation 
-eagerLoadRelation method를 살펴보면 $relation->toSql()에서 addEagerConstraints에서 where in이 추가되는 걸 볼수 있다. 
+eagerLoadRelation method를 살펴보면 $relation->toSql()을 debug watch에 넣어놓고 보면 addEagerConstraints 수행 후 where in이 추가되는 걸 볼수 있다. 
 key를 배열로 뽑아내고 implode 해서 in 절에 넣어 해당 key 값만 relation model로 가져온다.
 ```
