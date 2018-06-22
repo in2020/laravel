@@ -7,7 +7,7 @@
 * Apache2.4 php7.0 mysql5.6 
 * Laravel5.4
 * Goal
-* Laravel study
+* [Laravel study](https://github.com/in2020/laravel/blob/master/STUDY.md)
 
 ## Aws(ec2)
 * Aws site: https://aws.amazon.com/ko/
@@ -43,4 +43,3 @@
 	*  not free... https://innostudio.de/fileuploader/documentation/#examples
   *  chose free library http://plugins.krajee.com/file-input#top
 
-## [Laravel study](https://github.com/in2020/laravel/blob/master/STUDY.md)
