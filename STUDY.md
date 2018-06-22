@@ -1,4 +1,8 @@
 # Study
+## 참고 사이트
+- https://www.lesstif.com/pages/viewpage.action?pageId=24445742
+- http://l5.appkr.kr/lessons/04-routing-basics.html
+
 ## Laravle Study(2018.05~)
 - laravel 프로젝트 코드를 git으로 땡기면 vendor를 땡기기 위해 composer install 써야하고 laravle app_key 생성해야한다. 
 - Model::create fillable guarded 설정 create로 row생성시 guarded 된(fillable에 포함되지 않는) column은 값이 설정되지 않는다. 
