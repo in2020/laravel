@@ -30,3 +30,10 @@
 - sql 약속어는 모두 대문자 작성
 ### 2018.06.18
 - collection을 잘못 인식하고 있던것이 collectino은 vetoer array 같은 자료형으로 받아 드려야하고 안에 들어가는 내용은 단순 item 어떤것도 올수 있음.. only 같은 메소드는 collection item에 먹히는 method이고 values 같은 아이템은 collection 자체에서 호출되는 method 
+### 2018.06.22
+- eager loading relation sql 보는 방법 
+```
+vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php:eagerLoadRelation 
+eagerLoadRelation method를 살펴보면 $relation->toSql()에서 addEagerConstraints에서 where in이 추가되는 걸 볼수 있다. 
+key를 배열로 뽑아내고 implode 해서 in 절에 넣어 해당 key 값만 relation model로 가져온다.
+```
