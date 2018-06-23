@@ -37,5 +37,6 @@ vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php:eagerLoadR
 eagerLoadRelation method를 살펴보면 $relation->toSql()을 debug watch에 넣어놓고 보면 addEagerConstraints 수행 후 where in이 추가되는 걸 볼수 있다. 
 key를 배열로 뽑아내고 implode 해서 in 절에 넣어 해당 key 값만 relation model로 가져온다.
 ```
-- calling controller from another controller is not goods prcatice [참고](https://laravel.com/docs/5.6/container)
+- calling controller from another controller is not goods prcatice[stackoverflow Q&A](https://stackoverflow.com/questions/30365169/access-controller-method-from-another-controller-in-laravel-5)
+- 서비스 컨테이너 [참고 사이트](https://www.laravel.co.kr/posts/258)
 
