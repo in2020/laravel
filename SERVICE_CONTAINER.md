@@ -71,7 +71,7 @@ container에 등록하고 클래스에서 사용될 객체를 생성자 인자�
 
 
 ## Larvel Service Container 사용법
-- ServiceProvider 클래스를 상속하여 만든 클래스의 register method에 container 등록 코드를 추가 한다.  
+- ServiceProvider 클래스를 상속하여 만든 클래스의 register method에 container  코드를 추가 한다.  
 [컨테이너 바인딩 방법](https://laravel.kr/docs/5.6/container#binding)
 - 생성된 클래스는 config/app.php providers에 추가되어 있어야 한다.  
 [참고](https://laravel.kr/docs/5.6/providers#registering-providers)
