@@ -1,7 +1,8 @@
 # Service Container
 ## Service Container 역할
 - [참고 사이트](https://www.laravel.co.kr/posts/258)
-- 라라벨의 서비스 컨테이너는 클래스의 의존성을 관리하고 의존성을 주입하는 강력한 도구 입니다.[Document](https://laravel.kr/docs/5.6/container)
+- 라라벨의 서비스 컨테이너는 클래스의 의존성을 관리하고 의존성을 주입하는 강력한 도구 입니다.  
+[Document](https://laravel.kr/docs/5.6/container)
 - 유닛 테스트가 가능한 형태로 구현을 한다는 것은 확장성이 좋고 커플링이 적다는 의미.
 - 기존에 interface 구현과 Factory 형태로 사용했으나 Factory 구현시 기능이 추가 될때마다 factory를 수정하거나 새로 만들어야하고 factory와 커플링되는 문제 발생
 ```
@@ -70,8 +71,10 @@ container에 등록하고 클래스에서 사용될 객체를 생성자 인자�
 
 
 ## Larvel Service Container 사용법
-- ServiceProvider 클래스를 상속하여 만든 클래스의 register method에 container 등록 코드를 추가 한다. [컨테이너 바인딩 방법](https://laravel.kr/docs/5.6/container#binding)
-- 생성된 클래스는 config/app.php providers에 추가되어 있어야 한다. [참고](https://laravel.kr/docs/5.6/providers#registering-providers)
+- ServiceProvider 클래스를 상속하여 만든 클래스의 register method에 container 등록 코드를 추가 한다.  
+[컨테이너 바인딩 방법](https://laravel.kr/docs/5.6/container#binding)
+- 생성된 클래스는 config/app.php providers에 추가되어 있어야 한다.  
+[참고](https://laravel.kr/docs/5.6/providers#registering-providers)
 ```
 class AppServiceProvider extends ServiceProvider
 {
