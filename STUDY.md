@@ -39,4 +39,6 @@ key를 배열로 뽑아내고 implode 해서 in 절에 넣어 해당 key 값만 
 ```
 - calling controller from another controller is bad prcatice[stackoverflow Q&A](https://stackoverflow.com/questions/30365169/access-controller-method-from-another-controller-in-laravel-5)
 - 서비스 컨테이너 [SERVICE_CONTAINER.md](https://github.com/in2020/laravel/blob/master/SERVICE_CONTAINER.md)
-
+### 2018.06.27
+- global로 설치한 패키지 update : composer global update 
+- helper : array_get, optional, head
