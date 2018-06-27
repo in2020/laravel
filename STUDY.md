@@ -42,3 +42,5 @@ key를 배열로 뽑아내고 implode 해서 in 절에 넣어 해당 key 값만 
 ### 2018.06.27
 - global로 설치한 패키지 update : composer global update 
 - helper : array_get, optional, head
+- app.php class aliases에 등록해서 쓸수 있는데... 느려진다는데... 
+- Facade 등록
