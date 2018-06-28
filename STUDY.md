@@ -49,4 +49,10 @@ key를 배열로 뽑아내고 implode 해서 in 절에 넣어 해당 key 값만 
 ```
 php artisan make:model Blog -m
 ```
-
+- method return type 선언시 null도 허용하고자 하면 자료형 앞에 ?를 붙인다.
+```
+function method() : ?Collection
+{
+    ...
+}
+```
