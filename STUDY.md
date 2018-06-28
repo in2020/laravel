@@ -44,3 +44,9 @@ key를 배열로 뽑아내고 implode 해서 in 절에 넣어 해당 key 값만 
 - helper : array_get, optional, head
 - app.php class aliases에 등록해서 쓸수 있는데... 느려진다는데... 
 - Facade 등록
+### 2018.06.28
+- artisan make:model 옵션중 -m을 주면 해당 모델에 대한 migration 파일이 자동으로 생성된다
+```
+php artisan make:model Blog -m
+```
+
