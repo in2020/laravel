@@ -56,3 +56,6 @@ function method() : ?Collection
     ...
 }
 ```
+### 2018.06.29
+- Eloquent collection diff with Support Collection
+ - Eloquent collection : Support Collection을 상속해서 구현되어 있음[Collection api](https://laravel.com/api/5.6/Illuminate/Database/Eloquent/Collection.html)
