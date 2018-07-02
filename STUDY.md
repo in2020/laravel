@@ -58,3 +58,15 @@ function method() : ?Collection
 ### 2018.06.29
 - Eloquent collection diff with Support Collection
  - Eloquent collection : Support Collection을 상속해서 구현되어 있음[Collection api](https://laravel.com/api/5.6/Illuminate/Database/Eloquent/Collection.html)
+
+### 2018.07.02 
+- Colleciton을 보다보니 Collection method들이 Array 형태로 예를 들고 있다. 그럼 object가 item 요소로 있을때 동작이 정확하지 않을 수 있을까? 
+```
+object일때 동작되지 않을 것 같은 method 몇개를 선택하여 test
+다음 method를 분석 해 보기로 한다. diff, filter, intersect
+diff : array_diff
+filter : array_filter
+intersect : array_intersect
+```
+- model을 chaining 시 Database\Elquent\Builder 클래스 반환.
+- 쿼리빌더 chaining 시 Database\Query\Builder 클래스 반환.
