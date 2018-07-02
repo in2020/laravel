@@ -60,13 +60,13 @@ function method() : ?Collection
  - Eloquent collection : Support Collection을 상속해서 구현되어 있음[Collection api](https://laravel.com/api/5.6/Illuminate/Database/Eloquent/Collection.html)
 
 ### 2018.07.02 
-- Colleciton을 보다보니 Collection method들이 Array 형태로 예를 들고 있다. 그럼 object가 item 요소로 있을때 동작이 정확하지 않을 수 있을까? 
+- Colleciton을 보다보니 Collection method들이 Array 형태로 예를 들고 있다. 그럼 object가 item 요소로 있을때 동작이 정확하지 않을 수 있을까?  
+  -> 당연 하겠지만 문제없고 php native array 관련 함수들이 item이 object라도 예상대로 동작하는것을 알수 있다.
 ```
 object일때 동작되지 않을 것 같은 method 몇개를 선택하여 test
-다음 method를 분석 해 보기로 한다. diff, filter, intersect
-diff : array_diff
-filter : array_filter
-intersect : array_intersect
+다음 method를 분석 해 보기로 한다. diff
+diff : 결국 Model Class diff method 구현부를 보면 array_diff로 구현 되어 있다. 
+array로 되어있는 변수가 각 item이 object라도 object에 할당된 값을 비교하여 값을 return 한다. 
 ```
 - model을 chaining 시 Database\Elquent\Builder 클래스 반환.
 - 쿼리빌더 chaining 시 Database\Query\Builder 클래스 반환.
