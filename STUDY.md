@@ -73,5 +73,5 @@ array로 되어있는 변수가 각 item이 object라도 object에 할당된 값
 - validation : present 
 - Is it better to separate a big query into multiple smaller queries?
   - network latency 측면으로 문제가 될수는 있지만 가독성과 db 연산을 줄인다는 점에서 big query를 지향해야 할것 같다.(db cpu를 더 많이 쓴다는 가정 하에)
-  - rest api 개념으로 봤을때 숙소 목록을 뿌려준다고 할때 도시 필터나 테마 필터가 URI에 포함되는게 맞을까 request parameters에 포함되는게 맞을까?
-    - URI에 포함되어야 하는게 맞다. 이유? 직관적이어야한다. request에 담으면 같은 URI에 머가 다른지 알수 없다.
+- rest api 개념으로 봤을때 숙소 목록을 뿌려준다고 할때 도시 필터나 테마 필터가 URI에 포함되는게 맞을까 request parameters에 포함되는게 맞을까?
+  - URI에 포함되어야 하는게 맞다. 이유? 직관적이어야한다. request에 담으면 같은 URI에 머가 다른지 알수 없다.
