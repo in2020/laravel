@@ -82,4 +82,4 @@ $collection->where->sort
 위와같은 chaining이 있다고 할때 sort전 데이터를 로그를 남기고자 하면 끊고 가는게 아니라 tap으로 chaining으로 가능
 $collection->where->tap->sort
 ```
-- facade 
+- [facade 사용에 대한 글](https://laracasts.com/discuss/channels/general-discussion/l5-injection-or-facade)
