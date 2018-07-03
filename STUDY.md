@@ -65,12 +65,12 @@ function method() : ?Collection
 ```
 object일때 동작되지 않을 것 같은 method 몇개를 선택하여 test
 다음 method를 분석 해 보기로 한다. diff
-diff : 결국 Model Class diff method 구현부를 보면 array_diff로 구현 되어 있다. 
+diff : 결국 Collection Class diff method 구현부를 보면 array_diff로 구현 되어 있다. 
 array로 되어있는 변수가 각 item이 object라도 object에 할당된 값을 비교하여 값을 return 한다. 
 ```
 - model을 chaining 시 Database\Elquent\Builder 클래스 반환.
 - 쿼리빌더 chaining 시 Database\Query\Builder 클래스 반환.
-- validation : present 
+- validation : present - 필드가 존재하고 있는지 확인하지만, 값이 비어있을 수 있습니다.
 - Is it better to separate a big query into multiple smaller queries?
   - network latency 측면으로 문제가 될수는 있지만 가독성과 db 연산을 줄인다는 점에서 big query를 지향해야 할것 같다.(db cpu를 더 많이 쓴다는 가정 하에)
 - rest api 개념으로 봤을때 숙소 목록을 뿌려준다고 할때 도시 필터나 테마 필터가 URI에 포함되는게 맞을까 request parameters에 포함되는게 맞을까?
