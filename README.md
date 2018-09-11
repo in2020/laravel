@@ -20,6 +20,7 @@
 
 ## Laravel 5.4
 * https://laravel.kr/docs/5.4/installation#server-requirements
+* 라라벨 설치 후 필수 설정 : Directory 권한 설정, .env 파일설정, php artisan key:generate
 * How To Install Composer and Laravel on EC2 Instance: https://www.youtube.com/watch?v=p_VwZTmyG5o
 * 라라벨 구조 설명 및 노드 모듈 설치: https://www.youtube.com/watch?v=0EOQToeoWP0
 
