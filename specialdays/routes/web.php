@@ -58,4 +58,6 @@
 //    });
 //});
 
+Auth::routes();
+
 Route::get('/', 'EventController@index');

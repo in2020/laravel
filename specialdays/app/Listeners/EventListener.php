@@ -3,6 +3,8 @@
 namespace App\Listeners;
 
 use App\Events\Event;
+use App\Jobs\SendEmail;
+use App\User;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Log;
@@ -27,6 +29,8 @@ class EventListener
      */
     public function handle(Event $event)
     {
-        Log::info('event');
+        Log::info('event listener');
+        SendEmail::dispatch(User::first());
+
     }
 }
