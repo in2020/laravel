@@ -30,7 +30,8 @@ class EventListener
     public function handle(Event $event)
     {
         Log::info('event listener');
-        SendEmail::dispatch(User::first());
+//        SendEmail::dispatch(User::first());
+        SendEmail::dispatch(User::first())->delay(now()->addMinutes(1));
 
     }
 }
