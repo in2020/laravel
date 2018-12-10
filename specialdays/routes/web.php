@@ -21,24 +21,12 @@ include_once "sections/customer/CustomerPlace.php";
 include_once "sections/customer/CustomerSetting.php";
 
 
-Route::domain(env('API_DOMAIN'))->group(function () {
-    Route::prefix('v1')->group(function () {
-        Route::resource('places', 'PlaceController');
-        Route::resource('activities', 'ActivityController');
-    });
-});
-
-Route::domain(env('APP_SUB_DOMAIN_1'))->group(function () {
-    Route::redirect('/here', '/there', 301);
-});
-
-Route::domain(env('APP_SUB_DOMAIN_2'))->group(function () {
-    Route::redirect('/here', '/there', 301);
-});
-
-Route::domain(env('APP_SUB_DOMAIN_3'))->group(function () {
-    Route::redirect('/here', '/there', 301);
-});
+//Route::domain(env('API_DOMAIN'))->group(function () {
+//    Route::prefix('v1')->group(function () {
+//        Route::resource('places', 'PlaceController');
+//        Route::resource('activities', 'ActivityController');
+//    });
+//});
 
 Route::domain(env('APP_DOMAIN'))->group(function () {
     Auth::routes();
@@ -57,3 +45,7 @@ Route::domain(env('APP_DOMAIN'))->group(function () {
         AdminActivity::routes();
     });
 });
+
+Auth::routes();
+
+Route::get('/', 'EventController@index');
