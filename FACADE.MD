@@ -5,26 +5,26 @@
   - 라라벨 퍼사드 : 파사드는 애플리케이션의 서비스 컨테이너에서 사용가능한 클래스들에 대한 "정적" 인터페이스를 제공
   
 ## 기본 sequence : request에서 response까지 라우터를 타고 어떻게 Controller가 호출되어 view 가 보여지는지?
-  - index.php
-    1. autoload
-    1. new Application
-      - registerBaseBindings
-      - registerBaseServiceProviders
-        - 각각의 주요 기능들을 Application에 bind
-      - registerCoreContainerAliases
-    1. bind important interfaces 
-      - Illuminate\Contracts\Http\Kernel
-      - Illuminate\Contracts\Console\Kernel
-      - Illuminate\Contracts\Debug\ExceptionHandler
-    1. make http\kernel
-    1. request 
-      - $kernel->handle( $request = Illuminate\Http\Request::capture() ) ; 
-      - http\kernel@sendRequestThroughRouter > dispatchToRouter
-        - Routing\Router@$this->router->dispatch($request); > $this->dispatchToRoute($request);        
-          - > $this->runRoute($request, $this->findRoute($request)); >  $this->runRouteWithinStack($route, $request) > $route->run()
-          - Routing\Route@$this->runController()
-    1. response 
-    1. terminate kernel
+### index.php
+- autoload
+- new Application
+  - registerBaseBindings
+  - registerBaseServiceProviders
+    - 각각의 주요 기능들을 Application에 bind
+  - registerCoreContainerAliases
+- bind important interfaces 
+  - Illuminate\Contracts\Http\Kernel
+  - Illuminate\Contracts\Console\Kernel
+  - Illuminate\Contracts\Debug\ExceptionHandler
+- make http\kernel
+- request 
+  - $kernel->handle( $request = Illuminate\Http\Request::capture() ) ; 
+  - http\kernel@sendRequestThroughRouter > dispatchToRouter
+    - Routing\Router@$this->router->dispatch($request); > $this->dispatchToRoute($request);        
+      - > $this->runRoute($request, $this->findRoute($request)); >  $this->runRouteWithinStack($route, $request) > $route->run()
+      - Routing\Route@$this->runController()
+- response 
+- terminate kernel
     
 ## Controller의 Facade들은 어떻게 static call 되어 질까?     
   - Cache::put() 호출 분석
@@ -38,11 +38,11 @@
       - singleton 설정 여부에 따라 해당 객체를 전역변수에 담아 사용할지 결정 한다. 
 
 ## How do I create a facade
-- reference(https://stackoverflow.com/questions/16957790/how-do-i-create-a-facade-class-with-laravel)
-  - Step 1  
+### reference(https://stackoverflow.com/questions/16957790/how-do-i-create-a-facade-class-with-laravel)
+- Step 1  
     Create a folder called facades in your app folder (app/facades).
 
-  - Step 2  
+- Step 2  
     Add the facade folder to your composer autoload.
 ```
 "autoload": {
@@ -52,7 +52,7 @@
     ]
 },
 ```
-  - Step 3  
+- Step 3  
     Create a Facade file in that folder (FooFacade.php) and add this content:
 ```
 <?php
@@ -62,7 +62,7 @@ class MyClass extends Facade {
     protected static function getFacadeAccessor() { return 'MyClassAlias'; } // most likely you want MyClass here
 }
 ```
-  - Step 4  
+- Step 4  
     Create a model in app/models (MyClass.php).
 ```
 <?php
@@ -74,7 +74,7 @@ class MyClass extends Eloquent {
     ...
 }
 ```
-  - Step 5  
+- Step 5  
     Create a new service provider (you can create a folder in app called serviceproviders and add it to composer autoload) (app/models/MyClassServiceProvider.php).
 ```
 <?php
@@ -95,7 +95,7 @@ class MyClassServiceProvider extends ServiceProvider {
 ```
 Here you can add new binding if you want another facade (don't forget to create a facade file if so).
 
-  - Step 6  
+- Step 6  
     Add the service provider to the providers array in config/app.php.
 ```
 'providers' => array(
@@ -103,8 +103,8 @@ Here you can add new binding if you want another facade (don't forget to create 
     'MyServiceProvider'
 )
 ```
-  - Step 7  
+- Step 7  
     Run composer dump so we can access our new classes.
 
-  - Step 8  
+- Step 8  
     You can now access MyClassAlias::method() as a facade.
